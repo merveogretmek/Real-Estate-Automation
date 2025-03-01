@@ -27,4 +27,49 @@ An automation script to automatically fill out real estate web forms using Selen
   - `pandas`
   - `numpy`
  
-## Installatio
+## Installation
+
+1. Clone the Repository:
+
+```bash
+git clone https://github.com/merveogretmek/real-estate-webform-auto-filler.git
+cd real-estate-webform-auto-filler
+```
+
+2. Install Dependencies:
+
+```bash
+pip install selenium webdriver-manager pandas numpy
+```
+
+## Usage 
+
+1. Configuration:
+   
+- Update the login credentials in `webform_filler.py` (replace `'username_here'` and `'password_here'` with your actual credentials).
+- Ensure your input data is loaded into a pandas DataFrame named `data`. The script expects specific column names that correspond to each form field (e.g., "Postcode", "Assessment Date", "Tenure", etc.).
+
+2. Run the Script:
+
+```bash
+python webform_filler.py
+```
+
+The script will:
+- Open the target URL and log in.
+- Navigate through the web form, filling out each section with data from the DataFrame.
+- Handle common Selenium exceptions and move seamlessly between sections.
+- Save and exit the form once all data has been submitted.
+
+## Project Structure
+
+```bash
+RealEstateWebFormAutoFiller/
+├── webform_filler.py   # Main automation script
+└── README.md           # Project documentation
+```
+
+
+Contributions, issues, and feature requests are welcome! Please feel free to open an issue or submit a pull request.
+
+
